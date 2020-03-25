@@ -1,4 +1,9 @@
-var haslo = "Bez pracy nie ma kołaczy";
+
+
+var hasla = ["Bez pracy nie ma kołaczy", "Kot w Butach", "Cicha woda brzegi rwie","Kevin sam w domu","Pinokio","Jajko mądrzejsze od kury","Do wesela się zagoi","Przyszła koza do woza","Piąte koło u wozu","Świnka Peppa","Paluszek i główka to szkolna wymówka","Nie taki diabeł straszny jak go malują","Gdzie dwóch się bije tam trzeci korzysta","Masz babo placek",""];
+
+var haslo = "";
+haslo = hasla[Math.floor(Math.random() * hasla.length)];
 haslo = haslo.toUpperCase();
 
 var haslo1 = "";
@@ -118,10 +123,14 @@ function sprawdz(nr) {
 
         if (ktoraszansa >= 9) {
             document.getElementById("alfabet").innerHTML = 'Przegrałeś<br><br><span class="reset" onclick="location.reload()">Jeszcze raz?</span>';
+            haslo = hasla[Math.floor(Math.random() * hasla.length)];
+            haslo = haslo.toUpperCase();
         }
 
     }
     if (haslo == haslo1) {
         document.getElementById("alfabet").innerHTML = "Tak jest! Podano prawidłowe hasło:<br> " + haslo + '<br><br><span class="reset" onclick="location.reload()">Jeszcze raz?</span>';
+        haslo = hasla[Math.floor(Math.random() * hasla.length)];
+        haslo = haslo.toUpperCase();
     }
 }
